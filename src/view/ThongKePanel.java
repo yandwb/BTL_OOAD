@@ -37,11 +37,35 @@ public class ThongKePanel extends JPanel {
 
         top.add(new JLabel("Từ ngày:")); top.add(spTuNgay);
         top.add(new JLabel("Đến ngày:")); top.add(spDenNgay);
-        JButton btnThongKe = new JButton("📊 Thống kê");
-        top.add(btnThongKe);
-        add(top, BorderLayout.NORTH);
+        JButton btnThongKe = new JButton("Thống kê");
+        JButton btnExcel = new JButton("Xuất Excel");
+        JButton btnPDF = new JButton("Xuất PDF");
 
+        top.add(btnThongKe);
+        top.add(btnExcel);
+        top.add(btnPDF);
+        add(top, BorderLayout.NORTH);
         btnThongKe.addActionListener(e -> thongKe());
+
+        btnExcel.addActionListener(e -> {
+            java.util.Date tuNgayUtil = (java.util.Date) spTuNgay.getValue();
+            java.util.Date denNgayUtil = (java.util.Date) spDenNgay.getValue();
+
+            ctrl.xuatExcel(
+                new Date(tuNgayUtil.getTime()),
+                new Date(denNgayUtil.getTime())
+            );
+        });
+
+        btnPDF.addActionListener(e -> {
+            java.util.Date tuNgayUtil = (java.util.Date) spTuNgay.getValue();
+            java.util.Date denNgayUtil = (java.util.Date) spDenNgay.getValue();
+
+            ctrl.xuatPDF(
+                new Date(tuNgayUtil.getTime()),
+                new Date(denNgayUtil.getTime())
+            );
+        });
     }
 
     private void initSummaryPanel() {
