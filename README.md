@@ -1,5 +1,5 @@
 # BTL_OOAD
-# Hệ thống Quản lý Trung tâm Gia sư (Tutor Center Management System)
+# Hệ thống Quản lý Trung tâm Gia sư 
 
 Đây là kho lưu trữ mã nguồn cho Bài tập lớn môn **Phân tích và Thiết kế Hướng đối tượng (OOAD)**. Hệ thống được thiết kế nhằm số hóa và tối ưu hóa quy trình nghiệp vụ tại một trung tâm gia sư, từ việc quản lý hồ sơ, tiếp nhận yêu cầu mở lớp, đến việc ghép lớp, lập phiếu tính phí và báo cáo doanh thu.
 
